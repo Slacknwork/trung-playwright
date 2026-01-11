@@ -11,10 +11,10 @@
     "test:example": "playwright test example",
     "test:report": "playwright show-report",
     "test:login": "playwright test tests/login.spec.ts --project=chromium --headed",
-    "test:loginData":"playwright test tests/login-data.spec.ts --project=chromium --headed",
+    "test:loginData":"playwright test tests/login-data.spec.ts --project=chromium",
     "test:homePage":"playwright test tests/home.spec.ts --project=chromium --headed",
     "test:home":"playwright test home --project=chromium --headed",
-    "test:myInfo":"playwright test myinfo --project=chromium --headed",
+    "test:myInfo":"playwright test myinfo --project=chromium",
     "test:mobile":"playwright test mobile --project=chromium --headed",
     "test:getByRole":"playwright test getByRole --project=chromium --headed",
     "test:api":"playwright test testAPI --project=chromium --headed"
