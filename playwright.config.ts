@@ -23,6 +23,14 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+
+  timeout: 100000,
+  // tang timeout cho expect: doi element xuat hien tren web
+  // expected(locator).toBeVisible()
+  expect: {
+    timeout: 20000
+  },
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -33,6 +41,12 @@ export default defineConfig({
     // Chụp screenshot khi test fail
     screenshot: 'only-on-failure',
     
+    // tang timeout cho cac action: click, fill, goto
+    actionTimeout: 30000,
+
+    // tang timeout cho cac navigation: goto, reload
+    navigationTimeout: 30000,
+
     // Quay video khi test fail
     video: 'retain-on-failure',
   },

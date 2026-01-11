@@ -30,6 +30,7 @@ export class MyInfoPage{
         // click vao nut upload
         await this.uploadBtn.waitFor({state: 'visible', timeout: 10000})
         await this.uploadBtn.click()
+         await this.page.waitForTimeout(2000)
 
         // chon hinh va upload hinh
         await this.fileInput.waitFor({state: 'visible', timeout:10000})

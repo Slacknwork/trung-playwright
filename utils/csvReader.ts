@@ -2,7 +2,6 @@
 // fs/promises -> có sẵn
 // path -> tìm đường dẫn tuyệt đối
 // csv-parse -> để phân tích file csv
-import { readFile } from 'fs/promises';
 import {join} from 'path'
 import {parse} from 'csv-parse/sync';
 import { readFileSync } from 'fs';
@@ -26,7 +25,7 @@ export const readFileFromCsv = (): LoginData[] => {
 
     // B3: parse data string => list LoginData
     const data = parse(fileContent, {
-        columns: true, // lấy dòng đầu làm header, làM key
+        columns: true, // lấy dòng đầu làm header, làm key
         skip_empty_lines: true, // bỏ qua những line data bị trống
         trim: true // bỏ khoảng trắng thừa
     }) as LoginData[];
